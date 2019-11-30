@@ -20,7 +20,6 @@
                 pixel.style.height = '20px';
                 boardContainer.appendChild(pixel);
             }
-
         }
     }
 

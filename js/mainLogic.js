@@ -24,7 +24,6 @@ const lblTop = document.getElementById('top-lbl');
 let isRotated = false;
 let isPaused = false;
 let fullRowIndices = [];
-//let fullRowCount;
 if (localStorage.getItem("top") === null) {
     localStorage.setItem("top", "0");
 }
@@ -52,10 +51,9 @@ export function clickStart() {
     }
     //clearing the next container
     clearNext();
-    // //resetting pause button
+    //resetting pause button
     isPaused = false;
     document.getElementById('pause-button').innerHTML = 'PAUSE';
-    //document.getElementById("pause-button").disabled = false;
     document.getElementById('pause-button').style.visibility = "visible";
     //clearing timeouts for landing
     for (let timeout of timeouts) {
@@ -269,7 +267,6 @@ function canMoveOrRotate(newCoordinates, direction) {
 
 //check if row is full
 function fullRowCheck() {
-    //fullRowCount = 0;
     let isFullRow = false;
     fullRowIndices.length = 0;
     for (let i = boardMatrix.length - 1; i >= 0; i--) {
@@ -286,15 +283,12 @@ function fullRowCheck() {
             for (let j = 0; j < boardMatrix[i].length; j++) {
                 document.getElementById(`${i}${j}`).className = 'fullRow';
             }
-            //delay += 1000;
             setTimeout(() => {
                 for (let j = 0; j < boardMatrix[i].length; j++) {
                     document.getElementById(`${i}${j}`).classList.remove('fullRow');
                 }
-            }, 1000);
+            }, 500);
             fullRowIndices.push(i);
-            //fullRowCount++;
-            //i++;
             isFullRow = true;
         }
     }
@@ -411,7 +405,7 @@ export function clickPause() {
         clearTimeout(timeout);
     }
     if(!isPaused) {
-        for (let i = 0; i < boardMatrix.length; i++) {
+        for (let i = 1; i < boardMatrix.length; i++) {
             for (let j = 0; j < boardMatrix[i].length; j++) {
                 let curPix = document.getElementById(`${i}${j}`);
                 curPix.classList.remove('blinkPause');
