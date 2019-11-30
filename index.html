@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tetris</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="Resources/tetris-icon.ico" />
+</head>
+<body>
+<div id="main-container">
+    <div id="logo-container">
+        <img src="Resources/tetris-logo.png" style="width:100px;">
+    </div>
+    <hr>
+    <div id="game-container">
+        <div id="board-container"></div>
+        <div id="right-sidebar">
+            <div id="next-container">
+                <label>NEXT</label>
+                <hr class="line">
+                <div id="next-figure">
+                    <div id="next00" class="next-grid-item"></div>
+                    <div id="next01" class="next-grid-item"></div>
+                    <div id="next02" class="next-grid-item"></div>
+                    <div id="next03" class="next-grid-item"></div>
+                    <div id="next10" class="next-grid-item"></div>
+                    <div id="next11" class="next-grid-item"></div>
+                    <div id="next12" class="next-grid-item"></div>
+                    <div id="next13" class="next-grid-item"></div>
+                    <div id="next20" class="next-grid-item"></div>
+                    <div id="next21" class="next-grid-item"></div>
+                    <div id="next22" class="next-grid-item"></div>
+                    <div id="next23" class="next-grid-item"></div>
+                    <div id="next30" class="next-grid-item"></div>
+                    <div id="next31" class="next-grid-item"></div>
+                    <div id="next32" class="next-grid-item"></div>
+                    <div id="next33" class="next-grid-item"></div>
+                </div>
+            </div>
+            <div id="level-scores">
+                <div class="level-top-score level">
+                    <label>LEVEL</label>
+                    <hr class="line">
+                    <label id="level-lbl" class="labels"></label>
+                </div>
+                <div class="level-top-score top">
+                    <label>TOP</label>
+                    <hr class="line">
+                    <label id="top-lbl" class="labels"></label>
+                </div>
+                <div class="level-top-score score">
+                    <label>SCORE</label>
+                    <hr class="line">
+                    <label id="score-lbl" class="labels"></label>
+                </div>
+            </div>
+            <div id="button-container">
+                <button id="pause-button" class="buttons">PAUSE</button>
+                <button id="start-button" class="buttons">START</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/main.js" type="module"></script>
+
+</body>
+</html>

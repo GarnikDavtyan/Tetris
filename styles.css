@@ -1,0 +1,134 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    /*background-image: linear-gradient(to right, red, orange, yellow, green, blue, purple);*/
+    background-color: #043260;
+}
+
+#main-container {
+    background-image: linear-gradient(to right, lightgrey, white);
+    width: fit-content;
+    margin: auto;
+    border-style: inset;
+    border-width: 5px;
+    padding: 5px;
+}
+
+#game-container {
+    display: flex;
+}
+
+#board-container {
+    border-style: solid;
+    border-radius: 5px;
+    width: 200px;
+    padding: 2px;
+    display: grid;
+}
+
+#logo-container {
+    width:100px;
+    margin:auto
+}
+
+#right-sidebar {
+    position: relative;
+    margin-left: 20px;
+    text-align: center;
+}
+
+#next-container {
+    font-weight: bold;
+    width: 110px;
+    height: 110px;
+    border-style: double;
+    border-radius: 5px;
+}
+
+.level-top-score {
+    width: 110px;
+    height: 55px;
+    border-style: double;
+    border-radius: 5px;
+}
+
+.top {
+    position: absolute;
+    top: 130px;
+    font-weight: bold;
+}
+
+.level {
+    position: absolute;
+    top: 205px
+}
+
+.score {
+    position: absolute;
+    top: 280px;
+}
+
+.line {
+    margin: 0;
+}
+
+#next-figure {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: 80px;
+    margin: 4px auto;
+}
+
+.next-grid-item {
+    box-sizing: border-box;
+    border-style: ridge;
+    border-width: 2px;
+    height: 20px;
+}
+
+.buttons {
+    width: 80px;
+    left: 50%;
+    margin-left: -40px;
+}
+#start-button {
+    position: absolute;
+    bottom: 3px;
+}
+
+#pause-button {
+    position: absolute;
+    bottom: 28px;
+}
+
+.labels {
+    position: relative;
+    top: 5px;
+}
+
+.blinkPause {
+animation: blink 1s linear infinite;
+}
+
+.blinkGameOver {
+    animation: blink 1s linear 4;
+}
+@keyframes blink {
+    60% {
+        background-color: red;
+    }
+    61% {
+        background-color: #ff000000;
+    }
+    100% {
+        background-color: #ff000000;
+    }
+}
+
+.fullRow {
+    animation: fl 0.5s linear 1;
+}
+@keyframes fl {
+    100% {
+        background-color: #ff000000;
+    }
+}
