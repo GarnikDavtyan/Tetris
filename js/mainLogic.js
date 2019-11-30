@@ -26,7 +26,7 @@ let isPaused = false;
 let fullRowIndices = [];
 //let fullRowCount;
 if (localStorage.getItem("top") === null) {
-    localStorage.setItem("top", "1000");
+    localStorage.setItem("top", "0");
 }
 
 //starting execution after clicking Start/Restart button
